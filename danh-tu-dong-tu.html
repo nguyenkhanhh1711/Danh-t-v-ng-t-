@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Từ loại: Danh từ và Động từ</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;800&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e6f5f6;--card:#fff;--ink:#0d3f56;--mute:#4f7a8a;--aq:#1aa3b8;--aq2:#7fd3de;--line:#cde8ec;--ok:#1f9f6e;--okb:#dcf5ea;--no:#e0507a;--nob:#ffe4ec;--or:#ff7a2f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.75 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:hidden}
+#top{position:fixed;top:0;left:0;right:0;z-index:60;padding:calc(8px + env(safe-area-inset-top,0px)) 14px 8px;background:#ffffffee;backdrop-filter:blur(8px);box-shadow:0 4px 20px #0d3f5622;transform:translateY(-110%);transition:transform .4s}
+#top.on{transform:none}
+.tb{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:12px;font:600 14px "Be Vietnam Pro"}
+.pg{flex:1;height:10px;border-radius:10px;background:var(--line);overflow:hidden}
+.pg i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--aq2),var(--aq));border-radius:10px;transition:width .5s}
+.tb span{white-space:nowrap}.tb .o{color:var(--ok)}.tb .w{color:var(--no)}
+#snd{border:0;background:none;font-size:20px;cursor:pointer}
+/* hero */
+header{position:relative;height:100vh;min-height:640px;overflow:hidden;background:linear-gradient(180deg,#6fbfcc 0,#a5dde3 45%,#d4f0f2 60%)}
+.cd{position:absolute;border-radius:50%;background:#fff;filter:blur(10px);opacity:.8;animation:dr 40s linear infinite alternate}
+@keyframes dr{to{transform:translateX(80px)}}
+.gl{position:absolute;width:70px;fill:#fff;opacity:.95;filter:drop-shadow(0 3px 4px #0d3f5666);animation:gf 16s ease-in-out infinite alternate}
+@keyframes gf{to{transform:translate(50vw,-30px) rotate(-8deg)}}
+.gl path{transform-origin:35px 20px;animation:fp .5s ease-in-out infinite alternate}
+@keyframes fp{to{transform:scaleY(.55)}}
+.hc{position:absolute;top:7vh;left:0;right:0;text-align:center;z-index:5}
+.scr{font:600 clamp(24px,5vw,38px) "Dancing Script",cursive;color:#0d3f56}
+.ls{font:800 clamp(14px,3.4vw,22px) "Be Vietnam Pro";letter-spacing:.55em;margin-right:-.55em;color:#0d3f56}
+.big{font:400 clamp(130px,36vw,380px)/.82 Anton;color:#0d3f56;-webkit-mask:linear-gradient(#000 55%,transparent 97%);mask:linear-gradient(#000 55%,transparent 97%);letter-spacing:2px}
+.water{position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,#2cb3c6 0,#0f7f9b 45%,#0a4a66 100%);z-index:4}
+.water:before{content:"";position:absolute;left:0;right:0;top:-26px;height:52px;background:radial-gradient(circle at 25px 52px,#2cb3c6 0 24px,transparent 25px) 0 0/50px 52px repeat-x;animation:wv 6s linear infinite}
+@keyframes wv{to{background-position:50px 0}}
+.rf{position:absolute;left:50%;top:-4%;width:min(820px,100vw);transform:translateX(-50%);opacity:.85}
+.fish{position:absolute;width:56px;animation:sw 18s linear infinite}
+@keyframes sw{from{transform:translateX(-80px)}to{transform:translateX(calc(100vw + 80px))}}
+#bub{position:absolute;inset:0;width:100%;height:100%}
+.cap{position:absolute;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(520px,90vw);z-index:6;text-align:center;background:#ffffff1f;border:1.5px solid #ffffff88;backdrop-filter:blur(8px);border-radius:22px;padding:10px 18px;color:#fff;font-size:14.5px}
+.cap .ls{color:#9fe8f2;font-size:12px;letter-spacing:.4em;margin:0 -.4em 4px 0;display:block}
+.go{border:0;background:#fff;color:var(--ink);font:800 15px "Be Vietnam Pro";padding:8px 24px;border-radius:30px;cursor:pointer;margin-top:6px;box-shadow:0 6px 18px #0d3f5666;transition:.25s}
+.go:hover{transform:translateY(-3px)}
+/* body */
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 130px}
+.sec{padding:80px 0 0}
+.eb{display:inline-block;background:var(--aq);color:#fff;font:800 12px "Be Vietnam Pro";letter-spacing:1.5px;padding:2px 14px;border-radius:20px;margin-bottom:8px}
+h2{font:800 clamp(26px,5vw,42px)/1.15 "Be Vietnam Pro";letter-spacing:-1px;margin-bottom:6px}
+.lead{color:var(--mute);margin-bottom:18px}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.on{opacity:1;transform:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.card{background:var(--card);border-radius:26px;padding:22px 24px;box-shadow:0 12px 34px #0d3f5618;border:1.5px solid var(--line);transition:transform .3s;position:relative}
+.card:hover{transform:translateY(-5px)}
+.card h3{font:800 21px/1.3 "Be Vietnam Pro";margin-bottom:6px}
+.pill{display:inline-block;color:#fff;font:800 13px "Be Vietnam Pro";padding:0 14px;border-radius:20px;margin-right:6px;background:var(--aq)}
+.pill.v{background:var(--or)}
+b{font-weight:600}
+ul{margin:6px 0 6px 20px}li{margin:3px 0}
+.ex{margin-top:8px;padding:7px 12px;background:var(--bg);border-radius:12px;border-left:4px solid var(--aq);font-size:15px}
+.ex.v{border-color:var(--or)}
+mark{background:#bff0f6;color:var(--ink);border-radius:5px;padding:0 4px;font-weight:600}
+mark.v{background:#ffd9bf}
+.mu{color:var(--mute)}
+.pc{padding:16px 20px}.pc h4{font:800 16px "Be Vietnam Pro";color:var(--aq);margin-bottom:2px}.pc.v h4{color:var(--or)}
+.warn{background:#fff3d6;border:2px dashed #e3b341;border-radius:20px;padding:14px 18px;margin-bottom:16px}
+/* suffix */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tabs button,.btn{font:800 15px "Be Vietnam Pro";border:2px solid var(--aq2);background:#fff;color:var(--ink);padding:5px 20px;border-radius:30px;cursor:pointer;transition:.2s}
+.tabs button:hover,.btn:hover{transform:translateY(-3px)}
+.tabs button.on{background:var(--aq);color:#fff;border-color:var(--aq)}.tabs button.on.v{background:var(--or);border-color:var(--or)}
+.sf{cursor:pointer;overflow:hidden}
+.sf .sx{font:800 26px "Be Vietnam Pro";color:var(--c)}
+.sf .ex2{max-height:0;opacity:0;transition:max-height .5s,opacity .4s;font-size:15px}
+.sf.open .ex2{max-height:200px;opacity:1;margin-top:8px}
+.sf:after{content:"chạm để xem ví dụ ▾";display:block;font-size:12px;color:var(--mute);margin-top:6px}
+.sf.open:after{content:"thu gọn ▴"}
+.ar{color:var(--c);font-weight:800;margin:0 4px}
+/* stress */
+.st{text-align:center}
+.st .w{font:800 clamp(34px,8vw,56px)/1.2 "Be Vietnam Pro";letter-spacing:2px;margin:10px 0}
+.st .w span{transition:.4s;color:var(--mute)}.st .w span.s{color:var(--c);text-shadow:0 0 18px color-mix(in srgb,var(--c) 50%,transparent);transform:scale(1.1);display:inline-block}
+/* quiz */
+.qh{margin:46px 0 14px;font:800 20px "Be Vietnam Pro";display:flex;gap:12px;align-items:center}
+.qh:after{content:"";flex:1;height:3px;background:linear-gradient(90deg,var(--aq2),transparent);border-radius:3px}
+.q{background:var(--card);border-radius:26px;padding:20px 24px;margin-bottom:16px;box-shadow:0 10px 28px #0d3f5618;border-left:8px solid var(--aq2);transition:border-color .3s}
+.q.ok2{border-left-color:var(--ok)}.q.no2{border-left-color:var(--no)}
+.qn{display:inline-block;background:var(--ink);color:#fff;font:800 13px "Be Vietnam Pro";padding:0 14px;border-radius:20px;margin-bottom:4px}
+.q p.t{font:600 18px/1.55 "Be Vietnam Pro";margin-bottom:12px}
+.q u{text-decoration:none;display:inline-block;min-width:56px;border-bottom:3px solid var(--aq);text-align:center;color:var(--aq);font-weight:800}
+.op{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.op{grid-template-columns:1fr}}
+.op button{display:flex;gap:10px;align-items:center;font:500 16px "Be Vietnam Pro";text-align:left;padding:9px 14px;border-radius:16px;border:2px solid var(--line);background:#f4fbfc;color:var(--ink);cursor:pointer;transition:.2s}
+.op button b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--line);display:grid;place-items:center;font:800 13px "Be Vietnam Pro"}
+.op button:hover:not(:disabled){border-color:var(--aq);transform:translateY(-2px)}
+.op button:disabled{cursor:default}
+.op .c{background:var(--ok);border-color:var(--ok);color:#fff}.op .c b{background:#fff;color:var(--ok)}
+.op .x{background:var(--no);border-color:var(--no);color:#fff;animation:sk .4s}.op .x b{background:#fff;color:var(--no)}
+@keyframes sk{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.fb{margin-top:12px;padding:12px 16px;border-radius:16px;font-size:15px;border-left:5px solid;animation:up .45s}
+.fb.ok{background:var(--okb);border-color:var(--ok)}.fb.no{background:var(--nob);border-color:var(--no)}
+@keyframes up{from{opacity:0;transform:translateY(10px)}}
+#res{text-align:center;background:linear-gradient(160deg,#1aa3b8,#0a4a66);color:#fff;border-radius:32px;padding:36px 20px;margin-top:44px;box-shadow:0 16px 40px #0d3f5666}
+#res h2{font-size:30px}#res .big2{font:800 clamp(52px,14vw,92px)/1.1 "Be Vietnam Pro";color:#bff0f6}
+#pp{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:6px 0 10px;font-size:14px}#pp i{font-style:normal;background:#ffffff26;border-radius:20px;padding:0 14px}
+#wl{font-size:14px;margin:6px 0}#wl a{color:#bff0f6;margin:0 3px}
+#res .btn{background:transparent;color:#fff;border-color:#fff;margin:4px}#res .btn:hover{background:#fff;color:#0a4a66}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="top"><div class="tb"><span>🌊 Danh từ &amp; Động từ</span><div class="pg"><i id="pg"></i></div><span id="st">0/55</span><span class="o" id="so">✔ 0</span><span class="w" id="sw">✘ 0</span><button id="snd" aria-label="Âm thanh">🔊</button></div></div>
+
+<header>
+  <div class="cd" style="left:-6%;top:44%;width:300px;height:70px"></div><div class="cd" style="right:-4%;top:40%;width:340px;height:80px;animation-delay:-14s"></div>
+  <svg class="gl" style="left:6%;top:30%" viewBox="0 0 70 40"><path d="M0 24Q16 0 35 18Q54 0 70 24Q54 14 35 28Q16 14 0 24Z"/></svg>
+  <svg class="gl" style="left:62%;top:18%;width:54px;animation-delay:-6s" viewBox="0 0 70 40"><path d="M0 24Q16 0 35 18Q54 0 70 24Q54 14 35 28Q16 14 0 24Z"/></svg>
+  <div class="hc"><div class="scr">chuyên đề</div><div class="ls">TỪ LOẠI</div><div class="big">NOUN</div></div>
+  <div class="water">
+    <svg class="rf" viewBox="0 0 820 250"><defs><filter id="wvf" x="-5%" y="-20%" width="110%" height="140%"><feTurbulence type="turbulence" baseFrequency="0.008 0.045" numOctaves="1" seed="3"><animate attributeName="baseFrequency" dur="9s" values="0.008 0.045;0.012 0.075;0.008 0.045" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" scale="26" xChannelSelector="R" yChannelSelector="G"/></filter><linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd3de"/><stop offset="1" stop-color="#1aa3b8" stop-opacity=".1"/></linearGradient></defs><text x="410" y="200" text-anchor="middle" font-family="Anton" font-size="300" fill="url(#gr)" filter="url(#wvf)" letter-spacing="2">VERB</text></svg>
+    <canvas id="bub"></canvas>
+    <svg class="fish" style="top:46%" viewBox="0 0 60 34"><path d="M52 17L60 6V28Z" fill="#ff7a2f"/><ellipse cx="28" cy="17" rx="26" ry="14" fill="#ff7a2f"/><path d="M18 4v26M34 5v24" stroke="#fff" stroke-width="5"/><circle cx="10" cy="14" r="2.4" fill="#0d3f56"/></svg>
+    <svg class="fish" style="top:66%;width:40px;animation-duration:26s;animation-delay:-11s" viewBox="0 0 60 34"><path d="M52 17L60 6V28Z" fill="#ff7a2f"/><ellipse cx="28" cy="17" rx="26" ry="14" fill="#ff7a2f"/><path d="M18 4v26M34 5v24" stroke="#fff" stroke-width="5"/><circle cx="10" cy="14" r="2.4" fill="#0d3f56"/></svg>
+  </div>
+  <div class="cap"><span class="ls">DANH TỪ &amp; ĐỘNG TỪ</span>Danh từ gọi tên mọi thứ, động từ là trái tim của câu. Một câu tiếng Anh bắt buộc phải có động từ.<br><button class="go" id="go">Lặn xuống học ➔</button></div>
+</header>
+
+<main class="wrap">
+<section class="sec" id="p1">
+  <div class="rv"><span class="eb">PHẦN 1</span><h2>Bản chất và chức năng</h2></div>
+  <div class="grid">
+    <div class="card rv"><h3><span class="pill">N</span>Danh từ (Noun)</h3><p><b>Khái niệm:</b> từ dùng để gọi tên người, sự vật, sự việc, hiện tượng, khái niệm.</p><p style="margin-top:8px"><b>Chức năng cốt lõi:</b></p><ul><li>Làm <b>Chủ ngữ (Subject)</b> thực hiện hành động.</li><li>Làm <b>Tân ngữ (Object)</b> chịu tác động của hành động.</li></ul></div>
+    <div class="card rv"><h3><span class="pill v">V</span>Động từ (Verb)</h3><p><b>Khái niệm:</b> từ dùng để diễn tả hành động hoặc trạng thái của chủ thể.</p><p style="margin-top:8px"><b>Chức năng cốt lõi:</b></p><ul><li>Là <b>trái tim của câu</b>, tạo ra ý nghĩa cho câu.</li><li>Một câu tiếng Anh <b>bắt buộc phải có</b> động từ.</li></ul></div>
+  </div>
+</section>
+
+<section class="sec" id="p2">
+  <div class="rv"><span class="eb">PHẦN 2</span><h2>Dấu hiệu nhận biết qua vị trí trong câu</h2><p class="lead">Để làm tốt dạng bài Word Form, hãy nắm quy tắc <b>“nhìn trước ngó sau”</b> để biết chỗ trống cần loại từ gì.</p></div>
+  <h3 class="rv" style="margin-bottom:10px"><span class="pill">N</span>Vị trí của danh từ: khi nào cần điền Noun?</h3>
+  <div class="grid" id="pn"></div>
+  <h3 class="rv" style="margin:34px 0 10px"><span class="pill v">V</span>Vị trí của động từ: khi nào cần điền Verb?</h3>
+  <div class="grid" id="pv"></div>
+</section>
+
+<section class="sec" id="p3">
+  <div class="rv"><span class="eb">PHẦN 3</span><h2>Ý nghĩa của các hậu tố (đuôi từ)</h2><p class="lead">Nhớ đuôi từ giúp nhận diện từ loại và suy ra nghĩa từ mới: chỉ người, chỉ vật hay chỉ hành động biến đổi? Chạm vào thẻ để xem ví dụ.</p></div>
+  <div class="tabs rv" id="tb"><button class="on" data-t="n">Hậu tố danh từ</button><button class="v" data-t="v">Hậu tố động từ</button></div>
+  <div class="grid" id="sfx"></div>
+</section>
+
+<section class="sec" id="p4">
+  <div class="rv"><span class="eb">PHẦN 4</span><h2>So sánh và lưu ý quan trọng</h2></div>
+  <div class="warn rv"><b>⚠ 1. Từ đa chức năng (vừa là danh từ, vừa là động từ)</b><br>Nhiều từ giữ nguyên cách viết nhưng từ loại thay đổi hoàn toàn tùy vào vị trí trong câu.</div>
+  <div class="grid">
+    <div class="card rv"><h3>Water</h3><div class="ex">I drink <mark>water</mark> every day. <span class="mu">(Danh từ: nước)</span></div><div class="ex v">My mother <mark class="v">waters</mark> the plants. <span class="mu">(Động từ: tưới nước)</span></div></div>
+    <div class="card rv"><h3>Book</h3><div class="ex">He reads a <mark>book</mark>. <span class="mu">(Danh từ: quyển sách)</span></div><div class="ex v">I need to <mark class="v">book</mark> a ticket. <span class="mu">(Động từ: đặt chỗ trước)</span></div></div>
+  </div>
+  <div class="warn rv" style="margin-top:22px"><b>⚠ 2. Quy tắc trọng âm với từ có 2 âm tiết</b><br>Với từ 2 âm tiết vừa là danh từ vừa là động từ (record, present, object), cách viết giữ nguyên nhưng <b>trọng âm thay đổi</b>: <b>Danh từ nhấn âm thứ 1</b>, <b>Động từ nhấn âm thứ 2</b>. Bấm để thử:</div>
+  <div class="card st rv" id="stc"><div class="tabs" style="justify-content:center"><button class="on" data-s="0">record</button><button data-s="1">present</button></div><div class="tabs" style="justify-content:center"><button class="on" data-k="n">Danh từ</button><button class="v" data-k="v">Động từ</button></div><div class="w" id="sw2"></div><p class="mu" id="sm"></p></div>
+</section>
+
+<section class="sec" id="p5">
+  <div class="rv"><span class="eb">PHẦN 5 &amp; 6</span><h2>Bài tập trắc nghiệm (55 câu)</h2><p class="lead">15 câu lý thuyết và 40 câu Word Form. Phân tích vị trí chỗ trống để chọn Danh từ hay Động từ, rồi đối chiếu đuôi từ. Chọn đáp án là có kết quả và giải thích ngay.</p></div>
+  <div id="mq"></div>
+  <div id="res" class="rv"><h2>Kết quả của bạn</h2><div class="big2" id="big2">0 / 55</div><div id="pp"></div><p id="msg">Hoàn thành cả 55 câu để nhận lời nhắn nhé.</p><div id="wl"></div><button class="btn" id="rw">Làm lại các câu sai</button><button class="btn" onclick="location.reload()">Làm lại tất cả ↺</button></div>
+</section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+let ac,on=true;
+function tone(f,t,d,ty,v,to){const o=ac.createOscillator(),g=ac.createGain();o.type=ty;o.frequency.setValueAtTime(f,t);if(to)o.frequency.exponentialRampToValueAtTime(to,t+d);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.015);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+d+.05)}
+function sfx(ok){if(!on)return;ac=ac||new(window.AudioContext||window.webkitAudioContext)();ac.resume();const t=ac.currentTime;if(ok)[660,880,1175].forEach((f,i)=>tone(f,t+i*.09,.4,"sine",.16));else{tone(300,t,.3,"triangle",.16,190);tone(220,t+.15,.35,"triangle",.14,150)}}
+$("#snd").onclick=()=>{on=!on;$("#snd").textContent=on?"🔊":"🔇"};
+/* positions */
+const PN=[["Đứng đầu câu làm Chủ ngữ","Đứng trước một động từ chia thì.","<mark>Pollution</mark> is a serious problem in big cities."],["Sau mạo từ / đại từ chỉ định","Sau a, an, the, this, that, these, those.","The <mark>development</mark> of this country is impressive."],["Sau tính từ (Adjective)","Tính từ sinh ra để bổ nghĩa cho danh từ.","She is a beautiful <mark>girl</mark>. / He made a quick <mark>decision</mark>."],["Sau tính từ sở hữu","Sau my, your, our, their, his, her, its và sở hữu cách ('s).","I highly respect his <mark>choice</mark>. / This is Mary's <mark>car</mark>."],["Sau lượng từ","Sau some, any, many, much, a lot of, several, all...","We need some <mark>information</mark> about the course."],["Sau giới từ","Sau in, on, at, of, for, with, about...","He is interested in <mark>music</mark>. / The importance of <mark>education</mark>."]];
+const PV=[["Ngay sau Chủ ngữ (S)","Đóng vai trò là động từ chính của câu.","The government <mark class=v>provides</mark> free education for children."],["Sau trạng từ chỉ tần suất","Sau always, usually, often, sometimes, never...","He always <mark class=v>finishes</mark> his work on time."],["Sau trợ động từ / động từ khuyết thiếu","Sau don't, doesn't, didn't, will, can, could, should, must (động từ ở dạng <b>nguyên thể</b>).","You must <mark class=v>improve</mark> your English skills."],["Sau giới từ “To” (to-infinitive)","Dùng để chỉ mục đích.","I study hard to <mark class=v>pass</mark> the final exam."]];
+$("#pn").innerHTML=PN.map(p=>`<div class="card pc rv"><h4>${p[0]}</h4><p class="mu">${p[1]}</p><div class="ex">➤ Ex: ${p[2]}</div></div>`).join("");
+$("#pv").innerHTML=PV.map(p=>`<div class="card pc v rv"><h4>${p[0]}</h4><p class="mu">${p[1]}</p><div class="ex v">➤ Ex: ${p[2]}</div></div>`).join("");
+/* suffix */
+const SX={n:[["-er / -or","Người thực hiện hành động. (Biến động từ thành danh từ chỉ người.)",["Teach (dạy):Teacher (giáo viên)","Act (diễn):Actor (diễn viên)"]],["-ee","Người BỊ TÁC ĐỘNG, người nhận. (Thường đi cặp với -er/-or.)",["Employ (thuê):Employee (nhân viên)","Interview:Interviewee (người được phỏng vấn)"]],["-ist / -ian","Chuyên gia, người nghiên cứu chuyên môn.",["Science:Scientist (nhà khoa học)","Music:Musician (nhạc sĩ)"]],["-tion / -sion / -ment","Sự việc, kết quả của một hành động. (Đuôi phổ biến nhất biến V thành N.)",["Inform (thông báo):Information","Develop (phát triển):Development"]],["-ness / -ity","Trạng thái, đặc điểm, phẩm chất. (Biến tính từ thành danh từ trừu tượng.)",["Happy:Happiness (sự hạnh phúc)","Able:Ability (khả năng)"]],["-ship / -hood","Mối quan hệ, hoặc một thời kỳ/giai đoạn.",["Friend:Friendship (tình bạn)","Child:Childhood (thời thơ ấu)"]]],
+v:[["-ize / -ise","Làm cho trở thành, hóa. (Biến danh/tính từ thành hành động.)",["Modern (hiện đại):Modernize (hiện đại hóa)","Memory:Memorize (ghi nhớ)"]],["-en","Làm cho có tính chất đó, làm cho hơn. (Thường đi với tính từ ngắn.)",["Wide (rộng):Widen (mở rộng)","Short (ngắn):Shorten (rút ngắn)"]],["-ify","Làm cho biến đổi thành...",["Beauty (vẻ đẹp):Beautify (làm đẹp)","Simple (đơn giản):Simplify (đơn giản hóa)"]],["-ate","Cấu tạo hành động mang tính quy trình.",["Fascinate:làm lôi cuốn","Translate:dịch thuật"]]]};
+function sfr(t){$("#sfx").innerHTML=SX[t].map(s=>`<div class="card sf rv on" style="--c:${t=="n"?"var(--aq)":"var(--or)"}"><div class="sx">${s[0]}</div><p>${s[1]}</p><div class="ex2">${s[2].map(e=>{const[a,b]=e.split(":");return `<div class="ex ${t=="v"?"v":""}">${a} <span class="ar">➤</span> <b>${b}</b></div>`}).join("")}</div></div>`).join("");document.querySelectorAll(".sf").forEach(c=>c.onclick=()=>c.classList.toggle("open"));document.querySelectorAll("#tb button").forEach(b=>b.classList.toggle("on",b.dataset.t==t))}
+document.querySelectorAll("#tb button").forEach(b=>b.onclick=()=>sfr(b.dataset.t));sfr("n");
+/* stress */
+const SW=[[["RE","cord"],["re","CORD"],"Bản ghi âm, kỷ lục","Ghi âm"],[["PRE","sent"],["pre","SENT"],"Món quà","Thuyết trình, bày tỏ"]];
+let sw=0,sk="n";
+function str(){const w=SW[sw],i=sk=="n"?0:1,p=w[i];$("#sw2").style.setProperty("--c",sk=="n"?"var(--aq)":"var(--or)");$("#sw2").innerHTML=`<span class="${i==0?"s":""}">${p[0]}</span>-<span class="${i==1?"s":""}">${p[1]}</span>`;$("#sm").innerHTML=sk=="n"?`<b>Danh từ</b>: trọng âm rơi vào âm tiết thứ 1. Nghĩa: ${w[2]}.`:`<b>Động từ</b>: trọng âm rơi vào âm tiết thứ 2. Nghĩa: ${w[3]}.`}
+$("#stc").querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{sw=+b.dataset.s;$("#stc").querySelectorAll("[data-s]").forEach(x=>x.classList.toggle("on",x==b));str()});
+$("#stc").querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{sk=b.dataset.k;$("#stc").querySelectorAll("[data-k]").forEach(x=>x.classList.toggle("on",x==b));str()});str();
+/* quiz */
+const Q=[
+["Vị trí nào sau đây KHÔNG PHẢI là vị trí thường thấy của Danh từ?","Sau giới từ (in, on, at, of)|Sau động từ khuyết thiếu (can, will)|Làm chủ ngữ đứng đầu câu|Sau mạo từ (a, an, the)",1,"Sau động từ khuyết thiếu (can, will) là vị trí của <b>động từ nguyên thể</b>, không phải danh từ."],
+["Hậu tố “-ee” trong các từ như “employee”, “interviewee” mang ý nghĩa bản chất là gì?","Người thực hiện hành động (chủ động)|Trạng thái của sự vật|Người chịu tác động của hành động (bị động)|Máy móc thực hiện hành động",2,"Hậu tố <b>-ee</b> chỉ người bị tác động, người nhận (employee, interviewee), thường đi cặp với -er/-or."],
+["Chức năng cốt lõi của Động từ trong câu tiếng Anh là gì?","Bổ nghĩa cho danh từ|Nối các mệnh đề với nhau|Diễn tả hành động, trạng thái của chủ thể|Thay thế cho danh từ",2,"Động từ diễn tả <b>hành động hoặc trạng thái</b> của chủ thể; là trái tim của câu."],
+["Từ nào sau đây là ĐỘNG TỪ dựa vào dấu hiệu hậu tố?","Development|Modernize|Actor|Happiness",1,"<b>-ize</b> là hậu tố động từ → Modernize (hiện đại hóa). Development, Actor, Happiness đều là danh từ."],
+["Hậu tố “-ness” (ví dụ: sadness, happiness) dùng để biến đổi từ loại như thế nào?","Tính từ thành Danh từ|Động từ thành Danh từ|Danh từ thành Động từ|Tính từ thành Động từ",0,"<b>-ness</b> biến tính từ thành danh từ trừu tượng (happy ➤ happiness)."],
+["Đuôi hậu tố “-ify” (ví dụ: beautify, simplify) mang ý nghĩa gì?","Chỉ một chuyên gia trong lĩnh vực|Sự việc đã được hoàn thành|Làm cho biến đổi thành, hóa thành|Một khoảng thời gian dài",2,"<b>-ify</b> = làm cho biến đổi thành, hóa thành (simple ➤ simplify)."],
+["Trong cấu trúc: “S + always + [Chỗ trống] + O”, chỗ trống cần điền loại từ gì?","Động từ|Danh từ|Giới từ|Tính từ",0,"Sau trạng từ chỉ tần suất (always) là <b>động từ</b>."],
+["Đứng ngay sau Tính từ sở hữu (my, your, his, her...) BẮT BUỘC phải là từ loại nào?","Mạo từ|Trạng từ|Động từ|Danh từ",3,"Sau tính từ sở hữu bắt buộc là <b>danh từ</b> (his choice)."],
+["Từ nào sau đây là DANH TỪ chỉ người dựa vào hậu tố?","Shorten|Musician|Friendship|Action",1,"<b>-ian</b> chỉ chuyên gia: musician (nhạc sĩ). Shorten là động từ; Friendship, Action là danh từ trừu tượng."],
+["Hậu tố “-ship” (ví dụ: friendship, leadership) thường mang ý nghĩa gì?","Mối quan hệ, cương vị|Hành động lãnh đạo|Sự di chuyển bằng tàu thuyền|Người thực hiện hành động",0,"<b>-ship</b> chỉ mối quan hệ, cương vị/giai đoạn (friendship, leadership)."],
+["Hậu tố “-en” (ví dụ: widen, shorten) dùng để làm gì?","Biến Tính từ thành Động từ|Biến Danh từ thành Tính từ|Biến Động từ thành Danh từ|Chỉ người thực hiện hành động",0,"<b>-en</b> biến tính từ thành động từ (wide ➤ widen, short ➤ shorten)."],
+["Đối với những từ 2 âm tiết vừa là Danh từ vừa là Động từ (như record), quy tắc trọng âm là:","Danh từ âm 2, Động từ âm 1|Danh từ âm 1, Động từ âm 2|Cả hai đều nhấn âm 1|Cả hai đều nhấn âm 2",1,"Danh từ nhấn âm 1, động từ nhấn âm 2 (RE-cord / re-CORD). <i>Lưu ý: bảng đáp án gốc ghi A, nhưng trái với phần lý thuyết của chính tài liệu nên trang chấm theo B.</i>"],
+["Từ “water” trong câu: “My mother waters the flowers” đóng vai trò là từ loại gì?","Danh từ|Tính từ|Động từ|Trạng từ",2,"Sau chủ ngữ “My mother” là động từ chính → <b>waters</b> = tưới nước."],
+["Trong câu: “He made a quick decision”, từ “decision” được điền vào vị trí do dấu hiệu nào?","Đứng sau động từ to-be|Làm chủ ngữ đầu câu|Đứng sau giới từ|Đứng sau tính từ (quick) bổ nghĩa cho nó",3,"“decision” đứng ngay sau tính từ <b>quick</b>; tính từ bổ nghĩa cho danh từ."],
+["Sau giới từ (in, on, at, about, for...) ta cần điền loại từ gì nếu đó là một từ đơn?","Tính từ|Động từ nguyên thể|Danh từ|Trạng từ",2,"Sau giới từ là <b>danh từ</b> (interested in music)."],
+["The government plans to ___ the city's infrastructure.","modernize|modernization|modern|modernity",0,"Sau “to” là động từ nguyên thể; -ize là hậu tố động từ → <b>modernize</b> (hiện đại hóa)."],
+["We had a long ___ about the environmental issues last night.","discussing|discuss|discussed|discussion",3,"Sau “a long” cần danh từ → <b>discussion</b> (cuộc thảo luận)."],
+["The ___ of the new shopping mall will create many jobs.","development|developer|develop|developed",0,"Sau “The”, trước “of”, cần danh từ chỉ sự việc → <b>development</b> (sự xây dựng/phát triển)."],
+["It is necessary to ___ the rules for the new employees.","simplicity|simple|simplify|simplifier",2,"Sau “to” cần động từ; -ify → <b>simplify</b> (đơn giản hóa)."],
+["She needs to ___ a solution for this problem immediately.","creation|creative|creator|create",3,"Sau “needs to” là động từ nguyên thể → <b>create</b> (tạo ra)."],
+["His sudden ___ surprised everyone in the meeting room.","appearance|appeared|appear|appears",0,"Sau tính từ sở hữu + tính từ (His sudden) là danh từ làm chủ ngữ → <b>appearance</b> (sự xuất hiện)."],
+["They want to ___ the road to reduce traffic jams.","wide|widen|width|widely",1,"Sau “to” là động từ; -en biến tính từ thành động từ → <b>widen</b> (mở rộng)."],
+["Health and ___ are the most important things in life.","happen|happily|happiness|happy",2,"Nối hai danh từ cùng loại (Health and ___) → <b>happiness</b> (hạnh phúc)."],
+["You must ___ your seatbelt before the flight takes off.","fastener|fastness|fast|fasten",3,"Sau động từ khuyết thiếu “must” là động từ nguyên thể → <b>fasten</b> (thắt chặt)."],
+["The teacher gave us a lot of useful ___ about the exam.","information|informative|inform|informed",0,"Sau “a lot of” + tính từ useful là danh từ → <b>information</b> (thông tin)."],
+["We should ___ our children to read more books every day.","courage|encouragement|encourage|courageous",2,"Sau “should” là động từ nguyên thể → <b>encourage</b> (khuyến khích)."],
+["The ___ of the computer changed the world completely.","inventor|invent|inventive|invention",3,"Sau “The”, làm chủ ngữ, chỉ sự việc (-tion) → <b>invention</b> (phát minh). Inventor là người nên không hợp “of the computer”."],
+["He didn't ___ to my question because he was busy.","responsive|respond|response|responder",1,"Sau “didn't” là động từ nguyên thể → <b>respond</b> (trả lời)."],
+["Thank you for your kind ___. I really appreciate it.","assistant|assist|assistance|assisted",2,"Sau “your kind” là danh từ chỉ sự việc (-ance) → <b>assistance</b> (sự giúp đỡ)."],
+["They will ___ the winners of the competition tomorrow morning.","announcement|announce|announcer|announced",1,"Sau “will” là động từ nguyên thể → <b>announce</b> (công bố)."],
+["The ___ of the new policy caused a lot of arguments.","applicant|apply|application|applicable",2,"Sau “The” là danh từ chỉ việc làm (-tion) → <b>application</b> (sự áp dụng). Applicant là người nộp đơn, không hợp nghĩa."],
+["Please ___ your password before logging in.","memorize|memory|memorization|memorable",0,"Câu mệnh lệnh cần động từ; -ize → <b>memorize</b> (ghi nhớ)."],
+["There is a strong ___ between smoking and lung cancer.","connect|connective|connected|connection",3,"Sau “a strong” là danh từ → <b>connection</b> (mối liên hệ)."],
+["I need to ___ my writing skills to get a better IELTS score.","improvement|improve|improving|improver",1,"Sau “need to” là động từ nguyên thể → <b>improve</b> (cải thiện)."],
+["Her ___ to learn English is very admirable.","determination|determined|determine|determining",0,"Sau tính từ sở hữu “Her” là danh từ làm chủ ngữ → <b>determination</b> (sự quyết tâm)."],
+["You should ___ carefully before making any life choice.","thought|thinker|think|thinking",2,"Sau “should” là động từ nguyên thể → <b>think</b> (suy nghĩ)."],
+["The manager had a long interview with the new ___.","employment|employ|employers|employee",3,"Sau “the new” là danh từ chỉ người được phỏng vấn (-ee) → <b>employee</b> (nhân viên mới). Employers là người thuê nên không hợp."],
+["We must ___ the environment from pollution to save our planet.","protective|protect|protection|protector",1,"Sau “must” là động từ nguyên thể → <b>protect</b> (bảo vệ)."],
+["What is the exact ___ of this word in Vietnamese?","meaning|mean|meaningful|meant",0,"Sau “the exact” (tính từ) là danh từ → <b>meaning</b> (nghĩa)."],
+["Can you ___ how to use this washing machine?","explanation|explanatory|explained|explain",3,"Sau “Can you” là động từ nguyên thể → <b>explain</b> (giải thích)."],
+["Their beautiful ___ has lasted for more than ten years.","friend|friendly|friendliness|friendship",3,"Sau “Their beautiful” là danh từ chỉ mối quan hệ (-ship) → <b>friendship</b> (tình bạn)."],
+["She uses expensive makeup to ___ her face before the party.","beautiful|beauty|beautify|beautifully",2,"Sau “to” là động từ; -ify → <b>beautify</b> (làm đẹp)."],
+["There was a lot of ___ among the fans during the football match.","excitement|excite|excited|exciting",0,"Sau “a lot of” là danh từ → <b>excitement</b> (sự phấn khích)."],
+["It is extremely hard to ___ a new language in just a few months.","mastery|master|masterful|mastering",1,"Sau “hard to” là động từ nguyên thể → <b>master</b> (thành thạo)."],
+["He showed great ___ when speaking in front of the large crowd.","confident|confidently|confidence|confide",2,"Sau tính từ “great” là danh từ → <b>confidence</b> (sự tự tin)."],
+["The doctor strongly advised him to ___ his daily sugar intake.","reduce|reduction|reducible|reductive",0,"Sau “advised him to” là động từ nguyên thể → <b>reduce</b> (giảm)."],
+["The tragic ___ of the Titanic was a famous historical event.","sink|sank|sinking|sunken",2,"Sau “The tragic” cần danh từ → <b>sinking</b> (vụ chìm tàu)."],
+["You have to ___ the official document before sending it.","signature|signal|signing|sign",3,"Sau “have to” là động từ nguyên thể → <b>sign</b> (ký)."],
+["Lack of sleep can negatively affect your ___ to focus on studying.","able|ability|enable|ably",1,"Sau tính từ sở hữu “your” là danh từ; -ity → <b>ability</b> (khả năng)."],
+["They plan to ___ a completely new software system next year.","introduction|introduce|introductory|introducer",1,"Sau “plan to” là động từ nguyên thể → <b>introduce</b> (giới thiệu, đưa vào sử dụng)."],
+["The teacher will ___ the students into four separate groups.","division|divisive|divide|dividend",2,"Sau “will” là động từ nguyên thể → <b>divide</b> (chia)."],
+["She expressed her deep ___ when she received the unexpected gift.","appreciate|appreciation|appreciative|appreciating",1,"Sau “her deep” là danh từ (-tion) → <b>appreciation</b> (sự cảm kích)."],
+["People must strictly ___ the law to maintain order in society.","obedience|obedient|obediently|obey",3,"Sau “must strictly” là động từ nguyên thể → <b>obey</b> (tuân theo)."],
+["The ___ of this national museum is completely free for children.","entrance|enter|entering|entrant",0,"Sau “The”, làm chủ ngữ, là danh từ → <b>entrance</b> (lối vào / vé vào cửa). Entrant là người tham gia nên không hợp."],
+["Regular exercise will significantly ___ your heart and lungs.","strength|strong|strengthen|strongly",2,"Sau “will significantly” là động từ nguyên thể; -en → <b>strengthen</b> (tăng cường)."]];
+const N=Q.length,res=Array(N).fill(null),L="ABCD";
+function card(i){const q=Q[i],o=q[1].split("|");return `<span class="qn">Câu ${i+1}</span><p class="t">${q[0].replace(/_{3,}/,"<u>&nbsp;</u>")}</p><div class="op">${o.map((t,j)=>`<button data-j="${j}"${res[i]!==null?" disabled":""}><b>${L[j]}</b>${t}</button>`).join("")}</div><div class="fb" style="display:none"></div>`}
+function bind(i){const el=$("#q"+i),q=Q[i],o=q[1].split("|"),bs=el.querySelectorAll("button"),fb=el.querySelector(".fb");bs.forEach(b=>b.onclick=()=>{const j=+b.dataset.j,ok=j==q[2];res[i]=ok?1:0;bs.forEach(x=>x.disabled=true);bs[q[2]].classList.add("c");if(!ok)b.classList.add("x");el.classList.add(ok?"ok2":"no2");fb.style.display="block";fb.className="fb "+(ok?"ok":"no");fb.innerHTML=(ok?"✅ <b>Chính xác!</b> ":`❌ <b>Chưa đúng.</b> Đáp án đúng là <b>${L[q[2]]}. ${o[q[2]]}</b>. `)+q[3];sfx(ok);upd()})}
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}}),{threshold:.06});
+Q.forEach((q,i)=>{if(i==0||i==15)$("#mq").insertAdjacentHTML("beforeend",`<div class="qh">${i?"Phần 6 · Word Form (câu 16–55)":"Phần 5 · Lý thuyết (câu 1–15)"}</div>`);const d=document.createElement("div");d.className="q rv";d.id="q"+i;d.innerHTML=card(i);$("#mq").appendChild(d);bind(i)});
+function upd(){const a=res.filter(x=>x!==null).length,o=res.filter(x=>x===1).length,t=res.slice(0,15).filter(x=>x===1).length;$("#pg").style.width=a/N*100+"%";$("#st").textContent=a+"/"+N;$("#so").textContent="✔ "+o;$("#sw").textContent="✘ "+(a-o);$("#big2").textContent=o+" / "+N;$("#pp").innerHTML=`<i>Lý thuyết: ${t}/15</i><i>Word Form: ${o-t}/40</i>`;
+const w=res.map((x,i)=>x===0?i:-1).filter(i=>i>=0);$("#wl").innerHTML=w.length?"Câu cần xem lại:"+w.map(i=>`<a href="#q${i}">${i+1}</a>`).join(" "):"";
+if(a==N){const p=o/N;$("#msg").textContent=p>=.9?"Xuất sắc! Bạn nắm chắc danh từ và động từ.":p>=.7?"Khá tốt! Xem lại vài câu sai rồi thử lại nhé.":"Cố lên! Đọc lại phần vị trí và hậu tố rồi làm lại nha.";$("#res").scrollIntoView({block:"center"})}else $("#msg").textContent="Hoàn thành cả 55 câu để nhận lời nhắn nhé."}
+$("#rw").onclick=()=>{const w=res.map((x,i)=>x===0?i:-1).filter(i=>i>=0);if(!w.length)return;w.forEach(i=>{res[i]=null;const el=$("#q"+i);el.className="q rv on";el.innerHTML=card(i);bind(i)});upd();$("#q"+w[0]).scrollIntoView({block:"center"})};
+/* fx */
+$("#go").onclick=()=>$("#p1").scrollIntoView();
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+addEventListener("scroll",()=>$("#top").classList.toggle("on",scrollY>innerHeight*.8));
+const cv=$("#bub"),x=cv.getContext("2d");let B=[];
+function rs(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;B=Array.from({length:30},()=>({x:Math.random()*cv.width,y:Math.random()*cv.height,r:Math.random()*5+1.5,s:Math.random()*.6+.2,p:Math.random()*6}))}rs();addEventListener("resize",rs);
+(function d(t){x.clearRect(0,0,cv.width,cv.height);B.forEach(b=>{b.y-=b.s;b.x+=Math.sin(t/800+b.p)*.4;if(b.y<-10)b.y=cv.height+10;x.beginPath();x.arc(b.x,b.y,b.r,0,7);x.strokeStyle="#ffffffaa";x.lineWidth=1.3;x.stroke();x.fillStyle="#ffffff22";x.fill()});requestAnimationFrame(d)})(0);
+</script>
+</body>
+</html>
